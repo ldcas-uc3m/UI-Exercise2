@@ -66,6 +66,17 @@ body, html {
     padding: 10px;
 }
 
+.button{
+    padding: 8px;
+    margin-left: 6.5%;
+    background-color: #5EAAA8;
+    border-radius: 200px;
+}
+
+.button:hover {
+    background-color: #377775;
+}
+
 /*Classes for the drop-down menu that appears when clicking on the profile picture*/
 .dropdown-content {
     display: none;
@@ -87,31 +98,6 @@ body, html {
 .dropdown a:hover {background-color: #ddd;}
   
 .show {display: block;}
-
-/*Menu classes*/
-.menu {
-    position: fixed;
-}
-.menu ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-} 
-.menu li {
-    padding: 8px;
-    margin-bottom: 7px;
-    background-color: #5EAAA8;
-}
-
-.menu a{
-    color: black;
-    text-decoration: none;
-}
-
-.menu li:hover {
-    background-color: #056676;
-}
-
 
 /*Main page content*/
 .main {
