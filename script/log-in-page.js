@@ -6,7 +6,6 @@ function validateLogIn() {
 
     let cookie_text = getCookie(username);
     if (cookie_text == ""){
-        setCookie("username", username, 30);
         output = "No user with that username";
     }else{
         var user_cookie = JSON.parse(cookie_text);
