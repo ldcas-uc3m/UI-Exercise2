@@ -102,6 +102,9 @@ body, html {
 /*Main page content*/
 .main {
     background-color: #F0E9D2;
+    margin-top: 5%;
+    margin-left: 4%;
+    margin-right: 4%;
 }
 
 /*Footer content*/
