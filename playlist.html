@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+        <title>Spop.ify</title>
+        <link rel="icon" href="img/logo.png">
+        <link rel="stylesheet" href="style/playlist.css">
+        <link rel="stylesheet" href="style/style.css">
+        <link rel="stylesheet" href="style/audioplayer.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined">
+        
+    </head>
+
+    
+    <body onload="LoadPlaylist()">
+        <div class="flex-container">
+            <!--Header part-->
+            <div class="col-12 row-1 header">
+                <div class="col-1 logo" >
+                    <img class="logo_img" src="img/logo.png">
+                </div>
+                <div class="col-2 title"><p>Spop.ify</p></div>
+                <div class="col-8 empty_cont">&nbsp;</div>
+                <div class="col-1 profile">
+                    <img onclick="myFunction()" class="profile_pic" id="profile" src="img/profile_pic/default_profile.jpg">
+                    <div id="myDropdown" class="dropdown-content">
+                        <a href="account.html">Account</a>
+                        <a href="profile.html">Profile</a>
+                        <a href="main-page-before-login.html" onclick='deleteCookie("username")'>Logout</a>
+                    </div>
+                </div> 
+            </div>
+
+            <div class = "col-12 row-10 flex-container">
+                <!--Menu part-->
+                
+                <div class = "col-3">
+                    &nbsp;
+                    <div class="menu col-3" style="top: 10%;">
+                        <ul>
+                            <li onclick='goTo("main-page-after-login.html")'>
+                                <img src="img/menu/home.png" width="15" height="15">
+                                Home
+                            </li>
+                            <li onclick='goToLiked()'>
+                                <img src="img/menu/heart.png" width="15" height="15">
+                                Favorite songs
+                            </li>
+                            <li onclick='goTo("create-playlist.html")'>
+                                <img src="img/menu/playlist.png" width="15" height="15">
+                                Create playlist
+                            </li>
+                            <li>
+                                <img src="img/menu/settings.png" width="15" height="15">
+                                Settings
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="menu col-3" style="bottom:9%;">
+                        <ul>
+                            <li>About us</li>
+                            <li>Privacy and cookies policy</li>
+                        </ul>
+                    </div>
+                </div>
+                            
+                <!--Main part-->
+                <div class="col-9 main">
+                    <div class="grid-container" id="playlist">
+                        <div class="artist-picture">
+                            <img src="https://i1.sndcdn.com/artworks-y6qitUuZoS6y8LQo-5s2pPA-t500x500.jpg" id="pict">
+                        </div>
+                        <div class="header2" id="name">
+                            Liked Songs
+                        </div>
+                    </div>                    
+                </div> 
+            </div>
+            <div class="col-12 row-1 footer">
+                <audio preload="auto" id= "audio" controls>
+					<source src="audio/ts/this-love.mp3">
+                </audio>
+            </div>
+        </div>
+        <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="script/main-page.js"></script>
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="script/audioplayer.js"></script>
+        <script src="script/playlist.js"></script>
+        
+    </body>
+</html>

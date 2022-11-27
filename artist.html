@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+        <title>Spop.ify</title>
+        <link rel="icon" href="img/logo.png">
+        <link rel="stylesheet" href="style/artist.css">
+        <link rel="stylesheet" href="style/style.css">
+        <link rel="stylesheet" href="style/audioplayer.css">
+    </head> 
+
+    <body onload="loadProfilePic()">
+        <div class="flex-container">
+            <!--Header part-->
+            <div class="col-12 row-1 header">
+                <div class="col-1 logo" >
+                    <img class="logo_img" src="img/logo.png">
+                </div>
+                <div class="col-2 title"><p>Spop.ify</p></div>
+                <div class="col-8 empty_cont">&nbsp;</div>
+                <div class="col-1 profile">
+                    <img onclick="myFunction()" class="profile_pic" id="profile" src="img/profile_pic/default_profile.jpg">
+                    <div id="myDropdown" class="dropdown-content">
+                        <a href="account.html">Account</a>
+                        <a href="profile.html">Profile</a>
+                        <a id="logout">Logout</a>
+                    </div>
+                </div>  
+            </div>
+
+            <div class = "col-12 row-11 flex-container">
+                <!--Menu part-->
+                <div class = "col-3">
+                    &nbsp;
+                    <div class="menu col-3" style="top: 10%;">
+                        <ul>
+                            <li onclick='goTo("main-page-after-login.html")'>
+                                <img src="img/menu/home.png" width="15" height="15">
+                                Home
+                            </li>
+                            <li onclick='goToLiked()'>
+                                <img src="img/menu/heart.png" width="15" height="15">
+                                Favorite songs
+                            </li>
+                            <li onclick='goTo("create-playlist.html")'>
+                                <img src="img/menu/playlist.png" width="15" height="15">
+                                Create playlist
+                            </li>
+                            <li>
+                                <img src="img/menu/settings.png" width="15" height="15">
+                                Settings
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="menu col-3" style="bottom:9%;">
+                        <ul>
+                            <li>About us</li>
+                            <li>Privacy and cookies policy</li>
+                        </ul>
+                    </div>
+                </div>
+                    
+                <!--Main part-->
+                <div class="col-9 main">
+                    <br>
+                    <div class="grid-container">
+
+                        <div class="artist-picture">
+                            <img src="img/artist/ts.jpg">
+                        </div>
+
+                        <div class="artist-name">
+                            Taylor Swift
+                        </div>
+
+                        <div class="description">
+                            Taylor Alison Swift (born December 13, 1989) is an American singer-songwriter. Her discography spans multiple genres and her narrative 
+                            songwriting, often inspired by her personal life, has received critical praise and widespread media coverage. Born in West Reading, Pennsylvania, 
+                            Swift moved to Nashville, Tennessee, at age 14 to become a country artist. She signed a songwriting deal with Sony/ATV Music Publishing in 2004 
+                            and a recording contract with Big Machine Records in 2005. Her 2006 self-titled debut album made her the first female country singer to write 
+                            or co-write a US platinum-certified album entirely. 
+                        </div>
+
+                        <div class="header2">
+                            Released albums
+                        </div>
+
+                        <div class="grid-song">
+                            <div class="grid2">
+                                <div>
+                                    <img class="cover" src="img/ts/lover.jpg" width="150" height="150">
+                                </div>
+                                <div class="song-name">
+                                    <div>
+                                        Lover
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid-song">
+                            <div class="grid2">
+                                <div>
+                                    <img class="cover" src="img/ts/folklore.jpg" width="150" height="150">
+                                </div>
+                                <div class="song-name">
+                                    <div>
+                                        Folklore
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid-song">
+                            <div class="grid2">
+                                <div>
+                                    <img class="cover" src="img/ts/evermore.jpg" width="150" height="150">
+                                </div>
+                                <div class="song-name">
+                                    <div>
+                                        Evermore
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div class="grid-song">
+                            <div class="grid2">
+                                <div>
+                                    <img class="cover" src="img/ts/red-tv.jpg" width="150" height="150">
+                                </div>
+                                <div class="song-name">
+                                    <div>
+                                        Red (Taylor's Version)
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid-song">
+                            <div class="grid2">
+                                <div>
+                                    <img class="cover" src="img/ts/midnights.jpg" width="150" height="150">
+                                </div>
+                                <div class="song-name">
+                                    <div>
+                                        Midnights
+                                    </div>
+                                </div>
+                            </div>                             
+                        </div>  
+                        
+                        <div class="header2">
+                            Released songs
+                        </div>
+                        <div class="grid-song">
+                            <div class="grid2">
+                                <div id="Taylor Swift - Mr. Perfectly Fine">
+                                    <img class="cover" src="img/ts/fearless-tv.jpg" width="150" height="150" onclick='changeSong("audio/ts/mr-perfectly-fine.mp3")'>
+                                </div>
+                                <div class="song-name">
+                                    <div>
+                                        Mr. Perfectly Fine
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div class="grid-song">
+                            <div class="grid2">
+                                <div>
+                                    <img class="cover" src="img/ts/midnights.jpg" width="150" height="150" onclick='changeSong("audio/ts/hits-different.mp3")'>
+                                </div>
+                                <div class="song-name">
+                                    <div>
+                                        Hits Different
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="grid-song">
+                            <div class="grid2">
+                                <div>
+                                    <img class="cover" src="img/ts/red-tv.jpg" width="150" height="150" onclick='changeSong("audio/ts/all-too-well-tv.mp3")'>
+                                </div>
+                                <div class="song-name">
+                                    <div>
+                                        All Too Well
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid-song">
+                            <div class="grid2">
+                                <div>
+                                    <img class="cover" src="img/ts/1989-tv.jpg" width="150" height="150" onclick='changeSong("audio/ts/this-love.mp3")'>
+                                </div>
+                                <div class="song-name">
+                                    <div>
+                                        This Love
+                                    </div>
+                                </div>
+                                    
+                            </div>                             
+                        </div>  
+                        <div class="grid-song">
+                            <div class="grid2">
+                                <div>
+                                    <img class="cover" src="img/ts/lover.jpg" width="150" height="150" onclick='changeSong("audio/ts/paper-rings.mp3")'>
+                                </div>
+                                <div class="song-name">
+                                    <div>
+                                        Paper Rings
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                                    
+                </div> 
+            </div>
+            <div class="col-12 row-1 footer">
+                <audio preload="auto" id= "audio" controls>
+                    <source src="audio/ts/this-love.mp3">
+                </audio>
+            </div>
+        </div>
+
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="script/main-page.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="script/audioplayer.js"></script>
+    </body>
+</html>

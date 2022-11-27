@@ -1,0 +1,147 @@
+/* Classes for like button*/
+#like1, #like2, #like3, #like4, #like5, #like6, #like7, #like8, #like9, #like10, #like11, #like12, #like13, #like14, #like15{
+    cursor: pointer;
+  }
+
+#filled_like1, #filled_like2, #filled_like3, #filled_like4, #filled_like5, #filled_like6, #filled_like7, #filled_like8, #filled_like9, #filled_like10, #filled_like11, #filled_like12, #filled_like13, #filled_like14, #filled_like15{
+    display: none;
+    cursor: pointer;
+    position: relative;
+}
+
+
+/*Main page content*/
+.grid-container {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    padding-top: 2%;
+    padding-bottom: 10%;
+    justify-content: left;
+}
+.grid2{  
+    grid-template: 150px / auto;  
+    width: 100%;
+    position: relative;
+    display: grid;
+    grid-template-columns: auto;
+}
+
+.grid-artist {
+    left: 0;
+    text-align: left;
+    font-size: 30px;
+    grid-column: 1 / span 5;
+    padding-top: 20px;
+    padding-left: 30px;
+    padding-bottom: 30px;
+  }
+
+.song-name {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 45% 10%;
+    padding-top: 5%;
+    justify-content: center;
+}
+
+.grid-song {
+    position:relative;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    padding-top: 10%;
+}
+
+.cover{
+    width:150px; 
+    height:150px;
+}
+
+
+.cover:hover{
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/*To adjust with and height*/
+[class*="col-"] {
+    float: left;
+}
+
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+.row-1 {height: 8.33%;}
+.row-2 {height: 16.66%;}
+.row-3 {height: 25%;}
+.row-4 {height: 33.33%;}
+.row-5 {height: 41.66%;}
+.row-6 {height: 50%;}
+.row-7 {height: 58.33%;}
+.row-8 {height: 66.66%;}
+.row-9 {height: 75%;}
+.row-10 {height: 83.33%;}
+.row-11 {height: 91.66%;}
+.row-12 {height: 100%;}
+
+
+/*responsive part*/
+
+@media only screen and (max-width: 1200px) {
+    /* Intermediate display between desktop and tablet */
+    .grid-artist {
+        grid-column: 1 / span 3;
+    }
+    
+    .grid-container {
+        grid-template-columns: 33% 33% 33%;
+        padding-right: 2%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    /* Display for tablet */
+    .grid-artist {
+        grid-column: 1 / span 2;
+    }
+    
+    .grid-container {
+        grid-template-columns: 50% 50%;
+        padding-right: 2%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    /* Display for mobile phones */
+    .grid-artist {
+        grid-column: 1 / span 2;
+    }
+    
+    .grid-container {
+        grid-template-columns: 50% 50%;
+        padding-right: 2%;
+    }
+}
+
+@media only screen and (max-width: 340px) {
+    /* Display for mobile phones */
+    .grid-artist {
+        grid-column: 1 / span 1;
+    }
+    
+    .grid-container {
+        grid-template-columns: 100%;
+        padding-right: 2%;
+    }
+}

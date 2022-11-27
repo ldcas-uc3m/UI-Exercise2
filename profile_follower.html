@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+        <title>Spop.ify</title>
+        <link rel="icon" href="img/logo.png">
+        <link rel="stylesheet" href="style/profile_follower.css">
+        <link rel="stylesheet" href="style/style.css">
+        <link rel="stylesheet" href="style/audioplayer.css">
+    </head> 
+
+    <body onload="loadUserInfo()">
+        <div class="flex-container">
+            <!--Header part-->
+            <div class="col-12 row-1 header">
+                <div class="col-1 logo" >
+                    <img class="logo_img" src="img/logo.png">
+                </div>
+                <div class="col-2 title"><p>Spop.ify</p></div>
+                <div class="col-8 empty_cont">&nbsp;</div>
+                <div class="col-1 profile">
+                    <img onclick="myFunction()" class="profile_pic" id="profile" src="img/profile_pic/default_profile.jpg">
+                    <div id="myDropdown" class="dropdown-content">
+                        <a href="account.html">Account</a>
+                        <a href="profile.html">Profile</a>
+                        <a id="logout">Logout</a>
+                    </div>
+                </div>  
+            </div>
+
+            <div class = "col-12 row-11 flex-container">
+                <!--Menu part-->
+                <div class = "col-3">
+                    &nbsp;
+                    <div class="menu col-3" style="top: 10%;">
+                        <ul>
+                            <li onclick='goTo("main-page-after-login.html")'>
+                                <img src="img/menu/home.png" width="15" height="15">
+                                Home
+                            </li>
+                            <li onclick='goToLiked()'>
+                                <img src="img/menu/heart.png" width="15" height="15">
+                                Favorite songs
+                            </li>
+                            <li onclick='goTo("create-playlist.html")'>
+                                <img src="img/menu/playlist.png" width="15" height="15">
+                                Create playlist
+                            </li>
+                            <li>
+                                <img src="img/menu/settings.png" width="15" height="15">
+                                Settings
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="menu col-3" style="bottom:9%;">
+                        <ul>
+                            <li>About us</li>
+                            <li>Privacy and cookies policy</li>
+                        </ul>
+                    </div>
+                </div>
+                    
+                <!--Main part-->
+                <div class="col-9 main">
+                    <br>
+                    <div class="grid-container">
+
+                        <div class="artist-picture">
+                            <img src="img/profile_pic/default_profile.jpg" id="profile_picture">
+                        </div>
+
+                        <div class="artist-name" id="username">
+                            Username
+                        </div>
+
+                        <div class="header2">
+                            Top Artists
+                        </div>
+
+                        <div class="grid-song">
+                            <div class="grid2">
+                                <div>
+                                    <img class="cover" onclick='goTo("artist.html")' src="img/artist/ts.jpg" width="150" height="150">
+                                </div>
+                                <div class="song-name">
+                                    <div>
+                                        Taylor Swift
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid-song">
+                            <div class="grid2">
+                                <div>
+                                    <img class="cover" src="img/artist/hs.jpg" width="150" height="150">
+                                </div>
+                                <div class="song-name">
+                                    <div>
+                                        Harry Styles
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid-song">
+                            <div class="grid2">
+                                <div>
+                                    <img class="cover" src="img/artist/lauv.jpg" width="150" height="150">
+                                </div>
+                                <div class="song-name">
+                                    <div>
+                                        Lauv
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div class="grid-song">
+                            <div class="grid2">
+                                <div>
+                                    <img class="cover" src="img/artist/dc.jpg" width="150" height="150">
+                                </div>
+                                <div class="song-name">
+                                    <div>
+                                        Dove Cameron
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid-song">
+                            <div class="grid2">
+                                <div>
+                                    <img class="cover" src="img/artist/sm.jpg" width="150" height="150">
+                                </div>
+                                <div class="song-name">
+                                    <div>
+                                        Shawn Mendes
+                                    </div>
+                                </div>
+                            </div>                             
+                        </div>  
+                        
+                        <div class="header2">
+                            Most Played Songs
+                        </div>
+                        <div class="grid-song">
+                            <div class="grid2">
+                                <div id="Taylor Swift - Mr. Perfectly Fine">
+                                    <img class="cover" src="img/ts/red-tv.jpg" width="150" height="150" onclick='changeSong("audio/ts/all-too-well-tv.mp3")'>
+                                </div>
+                                <div class="song-name">
+                                    <div>
+                                        All Too Well
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div class="grid-song">
+                            <div class="grid2">
+                                <div>
+                                    <img class="cover" src="img/pop/all-4-nothing.jpg" width="150" height="150" onclick='changeSong("audio/pop/stranger.mp3")'>
+                                </div>
+                                <div class="song-name">
+                                    <div>
+                                        Stranger
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid-song">
+                            <div class="grid2">
+                                <div>
+                                    <img class="cover" src="img/ts/midnights.jpg" width="150" height="150" onclick='changeSong("audio/ts/hits-different.mp3")'>
+                                </div>
+                                <div class="song-name">
+                                    <div>
+                                        Hits Different
+                                    </div>
+                                </div>
+                                    
+                            </div>                             
+                        </div>  
+                        <div class="grid-song">
+                            <div class="grid2">
+                                <div>
+                                    <img class="cover" src="img/sm/when-youre-gone.jpg" width="150" height="150" onclick='changeSong("audio/sm/when-youre-gone.mp3")'>
+                                </div>
+                                <div class="song-name">
+                                    <div>
+                                        When You're Gone
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid-song">
+                            <div class="grid2">
+                                <div>
+                                    <img class="cover" src="img/pop/sour.jpg" width="150" height="150" onclick='changeSong("audio/pop/good-4-u.mp3")'>
+                                </div>
+                                <div class="song-name">
+                                    <div>
+                                        Good 4 u
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="grid-container" id="playlists">
+                        <div class="header2">
+                            Playlists
+                        </div>
+                        <div class="grid-song">
+                            <div class="grid2">
+                                <div>
+                                    <img class="cover" src="https://i1.sndcdn.com/artworks-y6qitUuZoS6y8LQo-5s2pPA-t500x500.jpg" width="150" height="150">
+                                </div>
+                                <div class="song-name">
+                                    <div>
+                                        Liked Songs
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid-song">
+                            <div class="grid2">
+                                <div>
+                                    <img class="cover" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/9398c530-d0a7-4c46-99b4-423a6aabf39f/d3kxnbe-f16dabfb-0cf1-436c-9315-915fbe462f23.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzkzOThjNTMwLWQwYTctNGM0Ni05OWI0LTQyM2E2YWFiZjM5ZlwvZDNreG5iZS1mMTZkYWJmYi0wY2YxLTQzNmMtOTMxNS05MTVmYmU0NjJmMjMucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.Gk0TAQTWUZBrHFjRC0y7pMEEdep95g7p6upVZNpXaZg" width="150" height="150">
+                                </div>
+                                <div class="song-name">
+                                    <div>
+                                        Ts Best Hits
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid-container-pad grid-container">
+                        <div class="header2">
+                            Followers
+                        </div>
+                        <div class="grid-song">
+                            <div class="grid2">
+                                <div>
+                                    <img class="cover" onclick="redirectFollower()" src="https://images.wsj.net/im-521202?width=1280&size=1" width="150" height="150">
+                                </div>
+                                <div class="song-name">
+                                    <div>
+                                        William Bowery
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid-song">
+                            <div class="grid2">
+                                <div>
+                                    <img class="cover" src="https://media.glamour.com/photos/5c2b969abd72722d8b7c2fab/1:1/w_1062,h_1062,c_limit/taylor-swift-nye-party.jpg" width="150" height="150">
+                                </div>
+                                <div class="song-name">
+                                    <div>
+                                        Nils Sjöberg
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid-song">
+                            <div class="grid2">
+                                <div>
+                                    <img class="cover" src="https://s36537.pcdn.co/wp-content/uploads/2015/06/OliviaBensonUpdate1.png" width="150" height="150">
+                                </div>
+                                <div class="song-name">
+                                    <div>
+                                        Olivia Benson Swift
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div class="grid-song">
+                            <div class="grid2">
+                                <div>
+                                    <img class="cover" src="https://static.wikia.nocookie.net/taylor-swift/images/2/2b/MeredithGrey.jpg/revision/latest?cb=20190329020913" width="150" height="150">
+                                </div>
+                                <div class="song-name">
+                                    <div>
+                                        Meredith Grey Swift
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid-song">
+                            <div class="grid2">
+                                <div>
+                                    <img class="cover" src="https://static.wikia.nocookie.net/taylor-swift/images/1/10/Benjamin_Button.jpg/revision/latest?cb=20190426225225" width="150" height="150">
+                                </div>
+                                <div class="song-name">
+                                    <div>
+                                        Benjamin Button Swift
+                                    </div>
+                                </div>
+                            </div>                             
+                        </div>  
+
+                    </div>                     
+                </div> 
+            </div>
+                    
+            <div class="col-12 row-1 footer">
+                <audio preload="auto" id= "audio" controls>
+					<source src="audio/ts/this-love.mp3">
+                </audio>
+            </div>
+        </div>
+
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="script/main-page.js"></script>
+    <script type="text/javascript" src="script/profile_follower.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="script/audioplayer.js"></script>
+    </body>
+</html>

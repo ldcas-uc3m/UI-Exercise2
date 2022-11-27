@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+        <title>Spop.ify</title>
+        <link rel="icon" href="img/logo.png">
+        <link rel="stylesheet" href="style/create-playlist.css">
+        <link rel="stylesheet" href="style/style.css">
+        <link rel="stylesheet" href="style/audioplayer.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined">
+        
+    </head>
+
+    
+    <body onload="loadLikes()">
+        <div class="flex-container">
+            <!--Header part-->
+            <div class="col-12 row-1 header">
+                <div class="col-1 logo" >
+                    <img class="logo_img" src="img/logo.png">
+                </div>
+                <div class="col-2 title"><p>Spop.ify</p></div>
+                <div class="col-8 empty_cont">&nbsp;</div>
+                <div class="col-1 profile">
+                    <img onclick="myFunction()" class="profile_pic" id="profile" src="img/profile_pic/default_profile.jpg">
+                    <div id="myDropdown" class="dropdown-content">
+                        <a href="account.html">Account</a>
+                        <a href="profile.html">Profile</a>
+                        <a id="logout">Logout</a>
+                    </div>
+                </div> 
+            </div>
+
+            <div class = "col-12 row-10 flex-container">
+                <!--Menu part-->
+                
+                <div class = "col-3">
+                    &nbsp;
+                    <div class="menu col-3" style="top: 10%;">
+                        <ul>
+                            <li onclick='goTo("main-page-after-login.html")'>
+                                <img src="img/menu/home.png" width="15" height="15">
+                                Home
+                            </li>
+                            <li onclick='goToLiked()'>
+                                <img src="img/menu/heart.png" width="15" height="15">
+                                Favorite songs
+                            </li>
+                            <li onclick='goTo("create-playlist.html")'>
+                                <img src="img/menu/playlist.png" width="15" height="15">
+                                Create playlist
+                            </li>
+                            <li>
+                                <img src="img/menu/settings.png" width="15" height="15">
+                                Settings
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="menu col-3" style="bottom:9%;">
+                        <ul>
+                            <li>About us</li>
+                            <li>Privacy and cookies policy</li>
+                        </ul>
+                    </div>
+                </div>
+                            
+                <!--Main part-->
+                <div class="col-9 main">
+
+                    <div class="artist-name">
+                        Playlist
+                    </div> 
+                    <div class="grid-container" id="myPlaylist"></div>
+                    <div class="form-text">
+                        Name of the playlist: <input id="name">
+                        <br>
+                        Image for the playlist: <input id="pict">
+                        <br>
+                        <button type="button" onclick="createPlaylist()">Submit</button>
+                        <p id="demo"></p>
+                    </div>
+                    <br><br><br>
+                    <input id="myInput" type="text" placeholder="Search..">
+                    <div class="grid-container-pad grid-container" id="myTable">
+                        <div class="grid-song">
+                            <div class="grid2">
+                                <div id="Taylor Swift - Mr. Perfectly Fine">
+                                    <img class="cover" src="img/ts/fearless-tv.jpg" width="150" height="150" onclick='addToPlaylist("mpf")'>
+                                </div>
+                                <div class="song-name">
+                                    <div>
+                                        <b>Mr. Perfectly Fine</b> <br>
+                                        Taylor Swift
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div class="grid-song">
+                            <div class="grid2">
+                                <div>
+                                    <img class="cover" src="img/ts/red-tv.jpg" width="150" height="150" onclick='addToPlaylist("atw")'>
+                                </div>
+                                <div class="song-name">
+                                    <div>
+                                        <b>All Too Well</b> <br>Taylor Swift
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid-song">
+                            <div class="grid2">
+                                <div>
+                                    <img class="cover" src="img/ts/1989-tv.jpg" width="150" height="150" onclick='addToPlaylist("tl")'>
+                                </div>
+                                <div class="song-name">
+                                    <div>
+                                        <b>This Love</b> <br>
+                                        Taylor Swift
+                                    </div>
+                                </div>
+                                  
+                            </div>                             
+                        </div>  
+                        <div class="grid-song">
+                            <div class="grid2">
+                                <div>
+                                    <img class="cover" src="img/ts/lover.jpg" width="150" height="150" onclick='addToPlaylist("pr")'>
+                                </div>
+                                <div class="song-name">
+                                    <div>
+                                        <b>Paper Rings</b> <br>
+                                        Taylor Swift
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid-song">
+                            <div class="grid2">
+                                <div>
+                                    <img class="cover" src="img/ts/folklore.jpg" width="150" height="150" onclick='addToPlaylist("e")'>
+                                </div>
+                                <div class="song-name">
+                                    <div>
+                                        <b>Exile</b> <br>
+                                        Taylor Swift
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="grid-song">
+                            <div class="grid2">
+                                <div>
+                                    <img class="cover" src="img/sm/handwritten.jpg" onclick='addToPlaylist("sti")'>
+                                </div>
+                                <div class="song-name">
+                                    <div>
+                                        <b>Stitches</b> <br>
+                                        Shawn Mendes
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid-song">
+                            <div class="grid2">
+                                <div>
+                                    <img class="cover" src="img/sm/illuminate.jpg" onclick='addToPlaylist("tnhmb")'>
+                                </div>
+                                <div class="song-name">
+                                    <div>
+                                        <b>There's Nothing Holdin' <br> Me Back</b> <br>
+                                        Shawn Mendes
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid-song">
+                            <div class="grid2">
+                                <div>
+                                    <img class="cover" src="img/sm/shawn-mendes.jpg" onclick='addToPlaylist("imb")'>
+                                </div>
+                                <div class="song-name">
+                                    <div>
+                                        <b>In My Blood</b> <br>
+                                        Shawn Mendes
+                                    </div>
+                                </div>
+                            </div>
+                        </div>  
+                        <div class="grid-song">
+                            <div class="grid2">
+                                <div>
+                                    <img class="cover" src="img/sm/wonder.jpg" onclick='addToPlaylist("305")'>
+                                </div>
+                                <div class="song-name">
+                                    <div>
+                                        <b>305</b> <br>
+                                        Shawn Mendes
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid-song">
+                            <div class="grid2">
+                                <div>
+                                    <img class="cover" src="img/sm/when-youre-gone.jpg" onclick='addToPlaylist("wyg")'>
+                                </div>
+                                <div class="song-name">
+                                    <div>
+                                        <b>When You're Gone</b> <br>
+                                        Shawn Mendes
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid-song">
+                            <div class="grid2">
+                                <div>
+                                    <img class="cover" src="img/pop/all-4-nothing.jpg" onclick='addToPlaylist("str")'>
+                                </div>
+                                <div class="song-name">
+                                    <div>
+                                        <b>Stranger</b> <br>
+                                        Lauv
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid-song">
+                            <div class="grid2">
+                                <div>
+                                    <img class="cover" src="img/pop/up-all-night.jpg" onclick='addToPlaylist("wmyb")'>
+                                </div>
+                                <div class="song-name">
+                                    <div>
+                                        <b>What Makes You Beautiful</b> <br>
+                                        One Direction
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid-song">
+                            <div class="grid2">
+                                <div>
+                                    <img class="cover" src="img/pop/montero.jpg" onclick='addToPlaylist("twiw")'>
+                                </div>
+                                <div class="song-name">
+                                    <div>
+                                        <b>That's What I Want</b> <br>
+                                        Lil Nas X
+                                    </div>
+                                </div>
+                            </div>
+                        </div>  
+                        <div class="grid-song">
+                            <div class="grid2">
+                                <div>
+                                    <img class="cover" src="img/pop/sour.jpg" onclick='addToPlaylist("g4u")'>
+                                </div>
+                                <div class="song-name">
+                                    <div>
+                                        <b>good 4 u</b> <br>
+                                        Olivia Rodrigo
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid-song">
+                            <div class="grid2">
+                                <div>
+                                    <img class="cover" src="img/pop/girl-of-my-dreams.jpg" onclick='addToPlaylist("sh")'>
+                                </div>
+                                <div class="song-name">
+                                    <div>
+                                        <b>Serial Heartbreaker</b> <br>
+                                        FLETCHER
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                    
+                </div> 
+            </div>
+            <div class="col-12 row-1 footer">
+                <audio preload="auto" id= "audio" controls>
+					<source src="audio/ts/this-love.mp3">
+                </audio>
+            </div>
+        </div>
+        <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="script/main-page.js"></script>
+        <script src="script/create-playlist.js"></script>
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="script/audioplayer.js"></script>
+        
+    </body>
+</html>

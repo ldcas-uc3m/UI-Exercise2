@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Spop.ify</title>
+        <link rel="icon" href="img/logo.png">
+        <link rel="stylesheet" href="style/sign-in-page.css">
+    </head>  
+
+    <body onload='checkUser()'>
+        <!--Header part-->
+        <div class="col-12 row-1 header">
+                <div class="col-1 logo" >
+                    <img class="logo_img" src="img/logo.png">
+                </div>
+                <div class="col-2 title"><p>Spop.ify</p></div>
+            </div>
+        <!--Main part-->
+        <div class="row-11 flex-container">
+            <div class="col-3 sides">&nbsp;</div>
+            
+            <div class = "row-8 col-3 form-div">
+                <h1>Personal information:</h1>
+
+                <p>Name:</p>
+                <input id="name" type = "text" autofocus>
+
+                <p>Surname:</p>
+                <input id="surname">
+
+                <p>Email:</p>
+                <input id="email">
+
+                <p>Date of birth:</p>
+                <input type="date" id="dob" min="1904-02-12">
+
+                <p>Profile picture:</p>
+                <input type="text" id="pict">
+                
+                
+            </div>
+            <div class = "row-8 col-3 form-div">
+                <h1>Account information:</h1>
+
+                <p>Username:</p>
+                <input id="username">
+
+                <p>Password:</p>
+                <input type="password" id="password" maxlength="8">
+                <br><br>
+                <input type="checkbox" id="checkbox" maxlength="8">I have read and accepted the Terms of Use
+                <br><br>
+                <button type="button" onclick="validateForm()">Save</button>
+                <button type="button" onclick="defaultValues()">Delete</button>
+
+                <p id="demo"></p>
+                <h1>Alternative options:</h1>
+                <div id= "google_signup">
+                    <img src="./img/google_logo.png" alt="">
+                    <p>Google</p>
+                  </div>
+                <div id= "fb_signup">
+                    <img src="./img/fb_logo.png" alt="">
+                    <p>Facebook</p>
+                </div>
+
+            </div>
+            <div class="col-3 sides">&nbsp;</div>  
+        </div>
+
+    <script type="text/javascript" src="script/sign-in-page.js"></script> 
+    <script type="text/javascript" src="script/main-page.js"></script> 
+    </body> 
+</html>

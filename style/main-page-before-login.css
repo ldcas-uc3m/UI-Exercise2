@@ -1,0 +1,73 @@
+/*Header classes*/
+a {
+    color: #ffffff;
+}
+.signin, .login{
+    color: #ffffff;
+}
+
+/*Main page content*/
+.cover{
+    top: 0;
+    width: 300px;
+    height: 300px;
+    align-self: center;
+}
+
+.countdown{
+    bottom: 0;
+    z-index: 100;
+}
+
+/*Footer content*/
+.footer {
+    position: fixed;
+    bottom: 0;
+    background-color: #056676;
+    color: #ffffff;
+    text-align: center;
+    z-index: 20;
+    font-size: 12px;
+    padding: 15px;
+}
+
+
+/*To adjust with and height*/
+/*responsive part*/
+
+@media only screen and (max-width: 1200px) {
+    /* Intermediate display between desktop and tablet */
+    .signin, .login{
+        width: 15%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    /* Display for tablet */
+    .signin, .login{
+        width: 15%;
+        padding-right: 2%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    /* Display for mobile phones */
+    .footer{
+        position:static;
+        bottom: 0;
+    }
+    .signin, .login{
+        width: 15%;
+    }
+}
+
+@media only screen and (max-width: 340px) {
+    /* Display for mobile phones */
+    .footer{
+        position:static;
+        bottom: 0;
+    }
+    .signin, .login{
+        width: 15%;
+    }
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+        <title>Spop.ify</title>
+        <link rel="icon" href="img/logo.png">
+        <link rel="stylesheet" href="style/style.css">
+        <link rel="stylesheet" href="style/main-page-before-login.css">
+    </head>
+
+    <body onload="checkUser()">
+        <div class="flex-container">
+            <!--Header part-->
+                    <div class="col-12 row-1 header">
+                        <div class="col-1 logo" >
+                            <img class="logo_img" src="img/logo.png">
+                        </div>
+                        <div class="col-2 title"><p>Spop.ify</p></div>
+                        <div class="col-7 empty_cont">&nbsp;</div>
+                        <div class="col-1 signin">
+                            <a href="sign-in-page.html" target = "_self">
+                                SIGN IN
+                            </a>
+                        </div>
+                        <div class="col-1 login">
+                            <a href="log-in-page.html" target = "_self">
+                                LOG IN
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class = "col-12 row-10 flex-container">
+                        <!--Main part-->
+                        <div class="row-6 col-6">
+                            <img class="cover" src="img/Sam_Smith_-_Gloria.png">
+                            <div class="countdown" id="countdown1"></div>
+                        </div> 
+                        <div class="row-6 col-6">
+                            <img class="cover" src="img/Louis_faith.jpg">
+                            <div class="countdown" id="countdown2"></div>
+                        </div>
+                    </div>
+
+                    <!--Footer part-->
+                    <div class="col-12 row-1 footer">Welcome new users to Spop.ify. Please sign in to listen to more amazing pop tunes!</div>
+        </div>
+
+    <script type="text/javascript" src="script/main-page-before-login.js"></script>
+    <script type="text/javascript" src="script/main-page.js"></script> 
+    </body>
+</html>
