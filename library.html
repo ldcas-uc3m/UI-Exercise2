@@ -10,7 +10,7 @@
         <link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
     </head> 
 
-    <body onload="loadProfilePic()">
+    <body onload="load_lib()">
         <div class="flex-container">
             <!--Header part-->
             <div class="col-12 row-1 header">
@@ -49,85 +49,21 @@
                 <!--Main part-->
                 <div class="col-12 main">
                     <div class="col-12 row-4 header_lib">
-                        <div class="col-2 button_lib" onclick='genPlaylist()'>
+                        <div class="col-2 button_lib" id="playlist_butt" onclick='genPlaylist()'>
                             Playlist        
                         </div>
-                        <div class="col-2 button_lib" onclick=''>
+                        <div class="col-2 button_lib" id="pod_butt" onclick='genPodcast()'>
                             Podcast        
                         </div>
-                        <div class="col-2 button_lib" onclick=''>
+                        <div class="col-2 button_lib" id="alb_butt" onclick='genAlbum()'>
                             Albums        
                         </div>
-                        <div class="col-2 button_lib" onclick=''>
+                        <div class="col-2 button_lib" id="art_butt" onclick='genArts()'>
                             Artists
                         </div>
                     </div>
                     <div class="col-12 flex-container">
-                        <div class="grid-container" id="myTable">
-                            <div class="grid-song">
-                                <div class="grid2">
-                                    <div id="Taylor Swift - Mr. Perfectly Fine">
-                                        <img class="cover" src="img/ts/fearless-tv.jpg" width="150" height="150" onclick='changeSong("audio/ts/mr-perfectly-fine.mp3")'>
-                                    </div>
-                                    <div class="song-name">
-                                        <div>
-                                            <b>Mr. Perfectly Fine</b>
-                                        </div>
-                                    </div>
-                                    
-                                </div>
-                            </div>
-                            <div class="grid-song">
-                                <div class="grid2">
-                                    <div>
-                                        <img class="cover" src="img/ts/red-tv.jpg" width="150" height="150" onclick='changeSong("audio/ts/all-too-well-tv.mp3")'>
-                                    </div>
-                                    <div class="song-name">
-                                        <div>
-                                            <b>All Too Well</b> 
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="grid-song">
-                                <div class="grid2">
-                                    <div>
-                                        <img class="cover" src="img/ts/1989-tv.jpg" width="150" height="150" onclick='changeSong("audio/ts/this-love.mp3")'>
-                                    </div>
-                                    <div class="song-name">
-                                        <div>
-                                            <b>This Love</b>
-                                        </div>
-                                    </div>
-                                      
-                                </div>                             
-                            </div>  
-                            <div class="grid-song">
-                                <div class="grid2">
-                                    <div>
-                                        <img class="cover" src="img/ts/lover.jpg" width="150" height="150" onclick='changeSong("audio/ts/paper-rings.mp3")'>
-                                    </div>
-                                    <div class="song-name">
-                                        <div>
-                                            <b>Paper Rings</b>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="grid-song">
-                                <div class="grid2">
-                                    <div>
-                                        <img class="cover" src="img/ts/folklore.jpg" width="150" height="150" onclick='changeSong("audio/ts/exile.mp3")'>
-                                    </div>
-                                    <div class="song-name">
-                                        <div>
-                                            <b>Exile</b>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                            </div>
-
+                        <div class="grid-container" id="myTable"></div>
                     </div>
                            
                 </div> 
