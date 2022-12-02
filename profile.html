@@ -16,8 +16,24 @@
                 <div class="col-1 logo" >
                     <img class="logo_img" src="img/logo.png">
                 </div>
-                <div class="col-2 title"><p>Spop.ify</p></div>
-                <div class="col-8 empty_cont">&nbsp;</div>
+                <div class="col-1 title"><p>Spop.ify</p></div>
+                <div class="col-1 empty_cont">&nbsp;</div>
+                <div class="col-6" style="padding: 50px;">
+                    <div class="button col-3" onclick='goTo("main-page-after-login.html")'>
+                        <img src="img/menu/home.png" width="15" height="15">
+                        Home                   
+                    </div>
+                        <!--Cambiar el goto-->
+                    <div class="button col-3" onclick='goTo("main-page-after-login.html")'>
+                        <img src="img/menu/lupa.png" width="15" height="15">
+                        Search
+                    </div>
+                    <div class="button col-3" onclick='goTo("library.html")'>
+                        <img src="img/menu/playlist.png" width="15" height="15">
+                        Library
+                    </div>
+                </div>
+                <div class="col-2 empty_cont">&nbsp;</div>
                 <div class="col-1 profile">
                     <img onclick="myFunction()" class="profile_pic" id="profile" src="img/profile_pic/default_profile.jpg">
                     <div id="myDropdown" class="dropdown-content">
@@ -25,43 +41,12 @@
                         <a href="profile.html">Profile</a>
                         <a id="logout">Logout</a>
                     </div>
-                </div>  
+                </div> 
             </div>
 
             <div class = "col-12 row-11 flex-container">
-                <!--Menu part-->
-                <div class = "col-3">
-                    &nbsp;
-                    <div class="menu col-3" style="top: 10%;">
-                        <ul>
-                            <li onclick='goTo("main-page-after-login.html")'>
-                                <img src="img/menu/home.png" width="15" height="15">
-                                Home
-                            </li>
-                            <li onclick='goToLiked()'>
-                                <img src="img/menu/heart.png" width="15" height="15">
-                                Favorite songs
-                            </li>
-                            <li onclick='goTo("create-playlist.html")'>
-                                <img src="img/menu/playlist.png" width="15" height="15">
-                                Create playlist
-                            </li>
-                            <li>
-                                <img src="img/menu/settings.png" width="15" height="15">
-                                Settings
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="menu col-3" style="bottom:9%;">
-                        <ul>
-                            <li>About us</li>
-                            <li>Privacy and cookies policy</li>
-                        </ul>
-                    </div>
-                </div>
-                    
                 <!--Main part-->
-                <div class="col-9 main">
+                <div class="col-12 main">
                     <br>
                     <div class="grid-container">
 
