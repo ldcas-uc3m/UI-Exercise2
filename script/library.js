@@ -51,10 +51,11 @@ function genAlbum(){
     document.getElementById("art_butt").style.color = "white";
 
     var target = document.getElementById("myTable");
-    target.innerHTML = "";
-    /*for (let i = 0; i < playlists.length; i++) {
-        target.innerHTML += "<div class='grid-song'><div class='grid2'><div><img class='cover' src=" + playlists[i][1] + " width='150' height='150' onclick=\"goToPlaylist('" + i.toString() + "')\"></div><div class='song-name'><div><b>" + playlists[i][0] + "</b> <br></div></div></div></div>";
-    }*/  
+    target.innerHTML = "<div class='grid-song'><div class='grid2'><div><img class='cover' src=img/pop/girl-of-my-dreams.jpg width='150' height='150'></div><div class='song-name'><div><b>Girl Of My Dreams</b> <br></div></div></div></div>";
+    target.innerHTML += "<div class='grid-song'><div class='grid2'><div><img class='cover' src=img/ts/midnights.jpg width='150' height='150'></div><div class='song-name'><div><b>Midnights</b> <br></div></div></div></div>";
+    target.innerHTML += "<div class='grid-song'><div class='grid2'><div><img class='cover' src=img/pop/sour.jpg width='150' height='150'></div><div class='song-name'><div><b>Sour</b> <br></div></div></div></div>";
+    target.innerHTML += "<div class='grid-song'><div class='grid2'><div><img class='cover' src=img/sm/shawn-mendes.jpg width='150' height='150'></div><div class='song-name'><div><b>Shawn Mendes</b> <br></div></div></div></div>";
+    target.innerHTML += "<div class='grid-song'><div class='grid2'><div><img class='cover' src=img/pop/all-4-nothing.jpg width='150' height='150'></div><div class='song-name'><div><b>All 4 Nothing</b> <br></div></div></div></div>";
 }
 
 function genArts(){
@@ -70,10 +71,11 @@ function genArts(){
     document.getElementById("art_butt").style.color = "#377775";
 
     var target = document.getElementById("myTable");
-    target.innerHTML = "";
-    /*for (let i = 0; i < playlists.length; i++) {
-        target.innerHTML += "<div class='grid-song'><div class='grid2'><div><img class='cover' src=" + playlists[i][1] + " width='150' height='150' onclick=\"goToPlaylist('" + i.toString() + "')\"></div><div class='song-name'><div><b>" + playlists[i][0] + "</b> <br></div></div></div></div>";
-    }*/  
+    target.innerHTML = "<div class='grid-song'><div class='grid2'><div><img class='cover' src='img/artist/ts.jpg' width='150' height='150'></div><div class='song-name'><div><b>Taylor Swift</b> <br></div></div></div></div>";
+    target.innerHTML += "<div class='grid-song'><div class='grid2'><div><img class='cover' src=img/artist/hs.jpg width='150' height='150'></div><div class='song-name'><div><b>Harry Styles</b> <br></div></div></div></div>";
+    target.innerHTML += "<div class='grid-song'><div class='grid2'><div><img class='cover' src=img/artist/lauv.jpg width='150' height='150'></div><div class='song-name'><div><b>Lauv</b> <br></div></div></div></div>";
+    target.innerHTML += "<div class='grid-song'><div class='grid2'><div><img class='cover' src=img/artist/dc.jpg width='150' height='150'></div><div class='song-name'><div><b>Dove Cameron</b> <br></div></div></div></div>";
+    target.innerHTML += "<div class='grid-song'><div class='grid2'><div><img class='cover' src=img/artist/sm.jpg width='150' height='150'></div><div class='song-name'><div><b>Shawn Mendes</b> <br></div></div></div></div>";
 }
 
 
