@@ -45,15 +45,30 @@
                 </div> 
             </div>
 
+            <!--Main part-->
             <div class = "col-12 row-10 flex-container">  
-                <!--Main part-->
                 <div class="col-3 main">
+                    <h1>Settings</h1>
                     <ul>
                         <li>Theme</li>
+                        <select name="mode" id="mode" oninput="setTheme(this.value)">
+                            <option value="default">Default</option>
+                            <option value="dark">Dark</option>
+                        </select>
                         <li>Audio Quality</li>
+                        <select name="audio-quality" id="audio-quality">
+                            <option value="high">High</option>
+                            <option value="medium">Medium</option>
+                            <option value="low">Low</option>
+                        </select>
                         <li>Crossfade</li>
+                        <p>0s</p>
+                        <input type="range" min="0" max="10" value="2" class="slider">
+                        <p>10s</p>
                         <li>Font</li>
-                        <input type="range" min="8" max="22" value="16" class="slider">
+                        <p>8px</p>
+                        <input type="range" min="8" max="28" value="16" class="slider" oninput="updateFont(this.value)">
+                        <p>22px</p>
                     </ul> 
                     <br><br><br><br><br><br>         
                 </div> 
