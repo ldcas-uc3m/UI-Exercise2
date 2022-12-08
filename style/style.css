@@ -59,6 +59,10 @@ body, html {
     font-size: 32px;
 }
 
+#account, #login{
+    padding-top: 5%;
+}
+
 .profile{
     left: 0;
     height: 100%;
@@ -128,10 +132,9 @@ body, html {
 }
 
 .line{
-    position: absolute;
+    position: relative;
     width: 180px;
-    top: 23%;
-    left:44%;
+    margin: auto;
     border: 5px solid #056676;
 }
 
