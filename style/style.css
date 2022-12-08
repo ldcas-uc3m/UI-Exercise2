@@ -127,9 +127,16 @@ body, html {
     padding: 2%;
 }
 
+.line{
+    position: absolute;
+    width: 180px;
+    top: 23%;
+    left:44%;
+    border: 5px solid #056676;
+}
 
 .tag{
-    margin-left: 40px;
+    margin-left: 1%;
     background-color: #5EAAA8;
     width: fit-content;
     text-align: center;
