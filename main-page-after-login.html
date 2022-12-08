@@ -12,7 +12,7 @@
     </head>
 
     
-    <body onload="loadLikes()">
+    <body onload="loadPage()">
         <div class="flex-container">
             <!--Header part-->
             <div class="col-12 row-1 header">
@@ -22,12 +22,12 @@
                 <div class="col-1 title"><p>Spop.ify</p></div>
                 <div class="col-1 empty_cont">&nbsp;</div>
                 <div class="col-6" style="padding: 50px;">
-                    <div class="button col-3" onclick='goTo("main-page-after-login.html")'>
+                    <div class="button_sel col-3" onclick='goTo("main-page-after-login.html")'>
                         <img src="img/menu/home.png" width="15" height="15">
                         Home                   
                     </div>
                         <!--Cambiar el goto-->
-                    <div class="button col-3" onclick='goTo("main-page-after-login.html")'>
+                    <div class="button col-3" onclick='goTo("search.html")'>
                         <img src="img/menu/lupa.png" width="15" height="15">
                         Search
                     </div>
@@ -50,25 +50,10 @@
             <div class = "col-12 row-10 flex-container"> 
                 <!--Main part-->
                 <div class="col-12 main">
-                    <br><br><br>
-                    <input id="myInput" type="text" placeholder="Search..">
                     <div class="grid-container" id="myTable">
-                        <div class="grid-song">
-                            <div class="grid2">
-                                <div id="Taylor Swift - Mr. Perfectly Fine">
-                                    <img class="cover" src="img/ts/fearless-tv.jpg" width="150" height="150" onclick='changeSong("audio/ts/mr-perfectly-fine.mp3")'>
-                                </div>
-                                <div class="song-name">
-                                    <div>
-                                        <b>Mr. Perfectly Fine</b> <br>
-                                        Taylor Swift
-                                    </div>
-                                    <div>
-                                        <a class="material-icons-outlined" id = "like1">favorite_border</a>
-                                        <a class="material-icons-outlined" id = "filled_like1">favorite</a>
-                                    </div>
-                                </div>
-                                
+                        <div class="row">
+                            <div class="tag">
+                                Recently listened
                             </div>
                         </div>
                         <div class="grid-song">
@@ -79,97 +64,6 @@
                                 <div class="song-name">
                                     <div>
                                         <b>All Too Well</b> <br>Taylor Swift
-                                    </div>
-                                    <div>
-                                        <a class="material-icons-outlined" id = "like2">favorite_border</a>
-                                        <a class="material-icons-outlined" id = "filled_like2">favorite</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="grid-song">
-                            <div class="grid2">
-                                <div>
-                                    <img class="cover" src="img/ts/1989-tv.jpg" width="150" height="150" onclick='changeSong("audio/ts/this-love.mp3")'>
-                                </div>
-                                <div class="song-name">
-                                    <div>
-                                        <b>This Love</b> <br>
-                                        Taylor Swift
-                                    </div>
-                                    <div>
-                                        <a class="material-icons-outlined" id = "like3">favorite_border</a>
-                                        <a class="material-icons-outlined" id = "filled_like3">favorite</a>
-                                    </div>
-                                </div>
-                                  
-                            </div>                             
-                        </div>  
-                        <div class="grid-song">
-                            <div class="grid2">
-                                <div>
-                                    <img class="cover" src="img/ts/lover.jpg" width="150" height="150" onclick='changeSong("audio/ts/paper-rings.mp3")'>
-                                </div>
-                                <div class="song-name">
-                                    <div>
-                                        <b>Paper Rings</b> <br>
-                                        Taylor Swift
-                                    </div>
-                                    <div>
-                                        <a class="material-icons-outlined" id = "like4">favorite_border</a>
-                                        <a class="material-icons-outlined" id = "filled_like4">favorite</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="grid-song">
-                            <div class="grid2">
-                                <div>
-                                    <img class="cover" src="img/ts/folklore.jpg" width="150" height="150" onclick='changeSong("audio/ts/exile.mp3")'>
-                                </div>
-                                <div class="song-name">
-                                    <div>
-                                        <b>Exile</b> <br>
-                                        Taylor Swift
-                                    </div>
-                                    <div>
-                                        <a class="material-icons-outlined" id = "like5">favorite_border</a>
-                                        <a class="material-icons-outlined" id = "filled_like5">favorite</a>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                        </div>
-                        <div class="grid-song">
-                            <div class="grid2">
-                                <div>
-                                    <img class="cover" src="img/sm/handwritten.jpg" onclick='changeSong("audio/sm/stitches.mp3")'>
-                                </div>
-                                <div class="song-name">
-                                    <div>
-                                        <b>Stitches</b> <br>
-                                        Shawn Mendes
-                                    </div>
-                                    <div>
-                                        <a class="material-icons-outlined" id = "like6">favorite_border</a>
-                                        <a class="material-icons-outlined" id = "filled_like6">favorite</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="grid-song">
-                            <div class="grid2">
-                                <div>
-                                    <img class="cover" src="img/sm/illuminate.jpg" onclick='changeSong("audio/sm/theres-nothing-holding-me-back.mp3")'>
-                                </div>
-                                <div class="song-name">
-                                    <div>
-                                        <b>There's Nothing Holdin' <br> Me Back</b> <br>
-                                        Shawn Mendes
-                                    </div>
-                                    <div>
-                                        <a class="material-icons-outlined" id = "like7">favorite_border</a>
-                                        <a class="material-icons-outlined" id = "filled_like7">favorite</a>
                                     </div>
                                 </div>
                             </div>
@@ -184,112 +78,6 @@
                                         <b>In My Blood</b> <br>
                                         Shawn Mendes
                                     </div>
-                                    <div>
-                                        <a class="material-icons-outlined" id = "like8">favorite_border</a>
-                                        <a class="material-icons-outlined" id = "filled_like8">favorite</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>  
-                        <div class="grid-song">
-                            <div class="grid2">
-                                <div>
-                                    <img class="cover" src="img/sm/wonder.jpg" onclick='changeSong("audio/sm/305.mp3")'>
-                                </div>
-                                <div class="song-name">
-                                    <div>
-                                        <b>305</b> <br>
-                                        Shawn Mendes
-                                    </div>
-                                    <div>
-                                        <a class="material-icons-outlined" id = "like9">favorite_border</a>
-                                        <a class="material-icons-outlined" id = "filled_like9">favorite</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="grid-song">
-                            <div class="grid2">
-                                <div>
-                                    <img class="cover" src="img/sm/when-youre-gone.jpg" onclick='changeSong("audio/sm/when-youre-gone.mp3")'>
-                                </div>
-                                <div class="song-name">
-                                    <div>
-                                        <b>When You're Gone</b> <br>
-                                        Shawn Mendes
-                                    </div>
-                                    <div>
-                                        <a class="material-icons-outlined" id = "like10">favorite_border</a>
-                                        <a class="material-icons-outlined" id = "filled_like10">favorite</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="grid-song">
-                            <div class="grid2">
-                                <div>
-                                    <img class="cover" src="img/pop/all-4-nothing.jpg" onclick='changeSong("audio/pop/stranger.mp3")'>
-                                </div>
-                                <div class="song-name">
-                                    <div>
-                                        <b>Stranger</b> <br>
-                                        Lauv
-                                    </div>
-                                    <div>
-                                        <a class="material-icons-outlined" id = "like11">favorite_border</a>
-                                        <a class="material-icons-outlined" id = "filled_like11">favorite</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="grid-song">
-                            <div class="grid2">
-                                <div>
-                                    <img class="cover" src="img/pop/up-all-night.jpg" onclick='changeSong("audio/pop/what-makes-you-beautiful.mp3")'>
-                                </div>
-                                <div class="song-name">
-                                    <div>
-                                        <b>What Makes You Beautiful</b> <br>
-                                        One Direction
-                                    </div>
-                                    <div>
-                                        <a class="material-icons-outlined" id = "like12">favorite_border</a>
-                                        <a class="material-icons-outlined" id = "filled_like12">favorite</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="grid-song">
-                            <div class="grid2">
-                                <div>
-                                    <img class="cover" src="img/pop/montero.jpg" onclick='changeSong("audio/pop/thats-what-i-want.mp3")'>
-                                </div>
-                                <div class="song-name">
-                                    <div>
-                                        <b>That's What I Want</b> <br>
-                                        Lil Nas X
-                                    </div>
-                                    <div>
-                                        <a class="material-icons-outlined" id = "like13">favorite_border</a>
-                                        <a class="material-icons-outlined" id = "filled_like13">favorite</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>  
-                        <div class="grid-song">
-                            <div class="grid2">
-                                <div>
-                                    <img class="cover" src="img/pop/sour.jpg" onclick='changeSong("audio/pop/good-4-u.mp3")'>
-                                </div>
-                                <div class="song-name">
-                                    <div>
-                                        <b>good 4 u</b> <br>
-                                        Olivia Rodrigo
-                                    </div>
-                                    <div>
-                                        <a class="material-icons-outlined" id = "like14">favorite_border</a>
-                                        <a class="material-icons-outlined" id = "filled_like14">favorite</a>
-                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -303,14 +91,38 @@
                                         <b>Serial Heartbreaker</b> <br>
                                         FLETCHER
                                     </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid-song">
+                            <div class="grid2">
+                                <div>
+                                    <img class="cover" src="img/pop/sour.jpg" onclick='changeSong("audio/pop/good-4-u.mp3")'>
+                                </div>
+                                <div class="song-name">
                                     <div>
-                                        <a class="material-icons-outlined" id = "like15">favorite_border</a>
-                                        <a class="material-icons-outlined" id = "filled_like15">favorite</a>
+                                        <b>good 4 u</b> <br>
+                                        Olivia Rodrigo
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>                    
+                        <div class="grid-song">
+                            <div class="grid2">
+                                <div>
+                                    <img class="cover" src="img/ts/lover.jpg" width="150" height="150" onclick='changeSong("audio/ts/paper-rings.mp3")'>
+                                </div>
+                                <div class="song-name">
+                                    <div>
+                                        <b>Paper Rings</b> <br>
+                                        Taylor Swift
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row" style="background-color: #F0E9D2">&nbsp;</div>
+                    </div>
+                    <div style="padding:5%; background-color: #F0E9D2;">&nbsp;</div>                    
                 </div> 
             </div>
             <div class="col-12 row-1 footer">
@@ -321,6 +133,7 @@
         </div>
         <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="script/main-page.js"></script>
+        <script src="script/library.js"></script>
 		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 		<script src="script/audioplayer.js"></script>
         

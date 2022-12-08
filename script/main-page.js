@@ -119,6 +119,46 @@ function loadProfilePic(){
   }
 }
 
+// Function to load all the data in the main page
+function loadPage(){
+  // Load Likes
+  loadLikes()
+  // Load playlist data
+  loadPlaylists()
+  // Load podcast data
+  loadPodcasts()
+}
+
+function loadPlaylists(){
+  let username = getCookie("username");
+  let cookie_text = getCookie(username);
+  var user_cookie = JSON.parse(cookie_text);
+  
+  playlists = user_cookie[6];
+
+  var target = document.getElementById("myTable");
+  target.innerHTML += "<div class='row'><div class='tag'>Playlists</div><div>";
+  for (let i = 0; i < playlists.length; i++) {
+      target.innerHTML += "<div class='grid-song'><div class='grid2'><div><img class='cover' src=" + playlists[i][1] + " width='150' height='150' onclick=\"goToPlaylist('" + i.toString() + "')\"></div><div class='song-name'><div><b>" + playlists[i][0] + "</b> <br></div></div></div></div>";
+  }
+  target.innerHTML+="<div class='row' style='background-color: #F0E9D2'>&nbsp;</div>"
+
+  // ADD HARDCODED RECOMMENDATIONS
+}
+
+function loadPodcasts(){
+  let username = getCookie("username");
+  let cookie_text = getCookie(username);
+  var user_cookie = JSON.parse(cookie_text);
+  
+  playlists = user_cookie[6];
+
+  var target = document.getElementById("myTable");
+  target.innerHTML += "<div class='row'><div class='tag'>Podcasts</div><div>";
+  target.innerHTML += "<div class='grid-song'><div class='grid2'><div><img class='cover' src='img/ts/red-tv.jpg' width='150' height='150'></div><div class='song-name'><div><b>Red</b> <br></div></div></div></div>";
+  // ADD HARDCODED RECOMMENDATIONS
+}
+
 // Function to load the songs liked by the user
 function loadLikes(){
   loadProfilePic()
