@@ -15,6 +15,11 @@ body, html {
     margin: 0;
 }
 
+.dark-mode {
+    color: white;
+    background-color: #19223b;
+}
+
 .flex-container {
     display: flex;
     flex-wrap: wrap;
