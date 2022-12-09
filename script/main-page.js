@@ -395,12 +395,28 @@ $(document).ready(function(){
 });  
 
 
+/* Font */
+
+function setFont(target) {
+  /* 
+  Changes the fontsize to the target font
+  */
+  fontSize = target + "px";
+  $("body").css({'font-size':fontSize});
+  localStorage.setItem('font-size', target);
+}
+
+function loadFont() {
+  const currentFont = localStorage.getItem('font-size') ? localStorage.getItem('font-size') : null;
+  setFont(currentFont);
+}
+
 /* Theme */
 
 function setTheme(value) {
   if (value === "default") {
       document.body.classList.remove("dark-mode");
-      $(".main").css({'background-color': '#F0E9D2'});
+      $(".main").css({'background-color': '#E6DDC4'});  // F0E9D2
       localStorage.setItem('theme', 'default');
   } else if (value === "dark") {
       document.body.classList.add("dark-mode");
@@ -414,4 +430,7 @@ function loadTheme() {
   setTheme(currentTheme);
 }
 
+
+/* MAIN */
+loadFont();
 loadTheme();
