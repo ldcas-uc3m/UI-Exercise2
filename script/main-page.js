@@ -334,3 +334,25 @@ $(document).ready(function(){
       $('#filled_like15').css("display", "none");
   });
 });  
+
+
+/* Theme */
+
+function setTheme(value) {
+  if (value === "default") {
+      document.body.classList.remove("dark-mode");
+      $(".main").css({'background-color': '#F0E9D2'});
+      localStorage.setItem('theme', 'default');
+  } else if (value === "dark") {
+      document.body.classList.add("dark-mode");
+      $(".main").css({'background-color': '#0f162d'});
+      localStorage.setItem('theme', 'dark');
+  }
+}
+
+function loadTheme() {
+  const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
+  setTheme(currentTheme);
+}
+
+loadTheme();
