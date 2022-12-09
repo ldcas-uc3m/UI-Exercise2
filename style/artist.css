@@ -1,8 +1,6 @@
 .grid-container {
     display: grid;
     width: 100%;
-    height: 100%;
-    padding-bottom: 10%;
     top:0;
     grid-template-columns: 20% 20% 20% 20% 20%;
     justify-content: left;
@@ -33,21 +31,11 @@
 
 .description{
     text-align: left;
+    padding: 3%;
     padding-top: 1%;
-    padding-left: 3%;
-    padding-right: 3%;
+    font-size: 18px;
     grid-column: 1 / span 5;
 }
-
-.header2{
-    left: 0;
-    text-align: left;
-    font-size: 30px;
-    grid-column: 1 / span 5;
-    padding-top: 20px;
-    padding-left: 30px;
-    padding-bottom: 30px;
-  }
 
 .grid2{  
     grid-template: 150px / auto;  
@@ -70,6 +58,7 @@
     font-weight: bold;
     width: 100%;
     padding-top: 5%;
+    padding-bottom: 5%;
     justify-content: center;
 }
 
@@ -102,7 +91,7 @@ audio{
 
 @media only screen and (max-width: 1200px) {
     /* Intermediate display between desktop and tablet */
-    .header2, .description {
+    .description {
         grid-column: 1 / span 3;
     }
 
@@ -123,7 +112,7 @@ audio{
 
 @media only screen and (max-width: 768px) {
     /* Display for tablet */
-    .header2, .description {
+    .description {
         grid-column: 1 / span 2;
     }
 
@@ -144,7 +133,7 @@ audio{
 
 @media only screen and (max-width: 600px) {
     /* Display for mobile phones */
-    .header2, .description {
+    .description {
         grid-column: 1 / span 2;
     }
 
@@ -165,7 +154,7 @@ audio{
 
 @media only screen and (max-width: 340px) {
     /* Display for mobile phones */
-    .header2, .description {
+    .description {
         grid-column: 1 / span 1;
     }
 

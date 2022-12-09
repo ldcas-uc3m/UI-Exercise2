@@ -4,7 +4,10 @@
 }
 
 html {
-    font-family: "Lucida Sans", sans-serif;
+    font-family: 'Arbutus Slab';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
     width: 100% !important;
 }
 
@@ -53,7 +56,11 @@ body, html {
 }
 
 .title {
-    font-size: 30px;
+    font-size: 32px;
+}
+
+#account, #login{
+    padding-top: 5%;
 }
 
 .profile{
@@ -112,6 +119,68 @@ body, html {
 .show {display: block;}
 
 /*Main page content*/
+
+/* Classes for like button*/
+#like1, #like2, #like3, #like4, #like5, #like6, #like7, #like8, #like9, #like10, #like11, #like12, #like13, #like14, #like15{
+    cursor: pointer;
+  }
+
+#filled_like1, #filled_like2, #filled_like3, #filled_like4, #filled_like5, #filled_like6, #filled_like7, #filled_like8, #filled_like9, #filled_like10, #filled_like11, #filled_like12, #filled_like13, #filled_like14, #filled_like15{
+    display: none;
+    cursor: pointer;
+    position: relative;
+}
+
+.grid-container {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    justify-content: left;
+}
+.grid2{  
+    grid-template: 150px / auto;  
+    width: 100%;
+    position: relative;
+    display: grid;
+    grid-template-columns: auto;
+}
+
+.grid-artist {
+    left: 0;
+    text-align: left;
+    font-size: 30px;
+    grid-column: 1 / span 5;
+    padding-top: 20px;
+    padding-left: 30px;
+    padding-bottom: 30px;
+  }
+
+.song-name {
+    display: grid;
+    width: 100%;
+    padding-top: 5%;
+    justify-content: center;
+}
+
+.grid-song {
+    position:relative;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    padding-bottom: 10%;
+}
+
+.cover{
+    width:150px; 
+    height:150px;
+}
+
+
+.cover:hover{
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
 .main {
     background-color: #E6DDC4;
     margin-top: 5%;
@@ -119,11 +188,48 @@ body, html {
     margin-right: 4%;
 }
 
+.header2{
+    background-color: #F0E9D2;
+    display: grid;
+    grid-column: 1 / span 5;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    left: 0;
+    text-align: left;
+    font-size: 30px;
+    grid-column: 1 / span 5;
+    padding-top: 20px;
+    padding-left: 30px;
+    padding-bottom: 30px;
+}
+
+.row{
+    grid-column: 1 / span 5;
+    padding: 2%;
+}
+
+.line{
+    position: relative;
+    width: 180px;
+    margin: auto;
+    border: 5px solid #056676;
+}
+
+.tag{
+    margin-left: 1%;
+    background-color: #5EAAA8;
+    width: fit-content;
+    text-align: center;
+    padding: 8px;
+    font-weight: bold;
+    color: white;
+}
+
 /*Footer content*/
 .footer {
     /*display:none;*/
     position: fixed;
     bottom: 0;
+    vertical-align: middle;
     background-color: #056676;
     color: #ffffff;
     text-align: center;
@@ -173,6 +279,14 @@ body, html {
     }
     .empty_cont{
         width: 100%;
+    }
+    .grid-artist {
+        grid-column: 1 / span 3;
+    }
+    
+    .grid-container {
+        grid-template-columns: 33% 33% 33%;
+        padding-right: 2%;
     }  
 }
 
@@ -187,6 +301,14 @@ body, html {
     }
     .empty_cont{
         width: 90%;
+    }
+    .grid-artist {
+        grid-column: 1 / span 2;
+    }
+    
+    .grid-container {
+        grid-template-columns: 50% 50%;
+        padding-right: 2%;
     }
 }
 
@@ -218,6 +340,14 @@ body, html {
     .empty_cont{
         width: 0;
     }
+    .grid-artist {
+        grid-column: 1 / span 2;
+    }
+    
+    .grid-container {
+        grid-template-columns: 50% 50%;
+        padding-right: 2%;
+    }
 }
 
 @media only screen and (max-width: 340px) {
@@ -248,5 +378,13 @@ body, html {
     }
     .empty_cont{
         width: 0;
+    }
+    .grid-artist {
+        grid-column: 1 / span 1;
+    }
+    
+    .grid-container {
+        grid-template-columns: 100%;
+        padding-right: 2%;
     }
 }
