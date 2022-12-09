@@ -65,16 +65,25 @@ var songs = {
 // Function to add the songs to the playlist part
 function LoadPlaylist(){
     loadProfilePic()
+    let username = getCookie("username");
     let playlist_text = getCookie("playlist");
     var playlist = JSON.parse(playlist_text);
     var image = document.getElementById('pict'); 
     image.src=playlist[1];
+    image.style.height = "200px";
+    image.style.weight = "200px";
     var name = document.getElementById('name'); 
     name.innerHTML=playlist[0];
+    var user = document.getElementById('username'); 
+    user.innerHTML = username;
 
     for (let i = 2; i < playlist.length; i++) {
         var target = document.getElementById("playlist");
         let audio = songs[playlist[i]+"_a"];
-        target.innerHTML += "<div class='grid-song'><div class='grid2'><div><img class='cover' src=" + songs[playlist[i]+"_i"] + " width='150' height='150' onclick=\"changeSong('" + audio + "')\"></div><div class='song-name'><div><b>" + songs[playlist[i]+"_t"] + "</b> <br>" + songs[playlist[i]+"_s"] + "</div></div></div></div>";
+        target.innerHTML += "<div class='grid-song'><img class='cover' src='" 
+        + songs[playlist[i]+"_i"] 
+        + "' onclick=\"changeSong('" + audio + "')\"></div><div class='grid2'><div class = 'song-name'>" + songs[playlist[i]+"_t"] 
+        + "</div><div class = 'song-artist'>" + songs[playlist[i]+"_s"] 
+        + "</div></div><div class='menu-song'>...</div><div class='line'></div>";
     }
 }
