@@ -7,6 +7,7 @@
         <link rel="stylesheet" href="style/style.css">
         <link rel="stylesheet" href="style/audioplayer.css">
         <link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="style/podcast-upload.css">
     </head> 
 
     <body onload="loadProfilePic()">
@@ -16,8 +17,24 @@
                 <div class="col-1 logo" >
                     <img class="logo_img" src="img/logo.png">
                 </div>
-                <a class="col-2 title"><p>Spop.ify</p></a>
-                <div class="col-8 empty_cont">&nbsp;</div>
+                <div class="col-1 title"><p>Spop.ify</p></div>
+                <div class="col-1 empty_cont">&nbsp;</div>
+                <div class="col-6" style="padding: 50px;">
+                    <div class="button col-3" onclick='goTo("main-page-after-login.html")'>
+                        <img src="img/menu/home.png" width="15" height="15">
+                        Home                   
+                    </div>
+                        <!--Cambiar el goto-->
+                    <div class="button col-3" onclick='goTo("main-page-after-login.html")'>
+                        <img src="img/menu/lupa.png" width="15" height="15">
+                        Search
+                    </div>
+                    <div class="button col-3" onclick='goTo("library.html")'>
+                        <img src="img/menu/playlist.png" width="15" height="15">
+                        Library
+                    </div>
+                </div>
+                <div class="col-2 empty_cont">&nbsp;</div>
                 <div class="col-1 profile">
                     <img onclick="myFunction()" class="profile_pic" id="profile" src="img/profile_pic/default_profile.jpg">
                     <div id="myDropdown" class="dropdown-content">
@@ -25,65 +42,27 @@
                         <a href="profile.html">Profile</a>
                         <a id="logout">Logout</a>
                     </div>
-                </div>  
+                </div> 
             </div>
 
             <div class = "col-12 row-10 flex-container">
-                <!--Menu part-->
-                <div class = "col-3">
-                    &nbsp;
-                    <div class="menu col-3" style="top: 10%;">
-                        <ul>
-                            <li onclick='goTo("main-page-after-login.html")'>
-                                <img src="img/menu/home.png" width="15" height="15">
-                                Home
-                            </li>
-                            <li onclick='goToLiked()'>
-                                <img src="img/menu/heart.png" width="15" height="15">
-                                Favorite songs
-                            </li>
-                            <li onclick='goTo("create-playlist.html")'>
-                                <img src="img/menu/playlist.png" width="15" height="15">
-                                Create playlist
-                            </li>
-                            <li>
-                                <img src="img/menu/settings.png" width="15" height="15">
-                                Settings
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="menu col-3" style="bottom:9%;">
-                        <ul>
-                            <li>About us</li>
-                            <li>Privacy and cookies policy</li>
-                        </ul>
-                    </div>
-                </div>
                     
                 <!--Main part-->
-                <div class="col-9 main">
+                <div class="col-12 main">
                     <div class = "form-div">
                         <h1>Upload a Podcast</h1>
         
                         <p>Title:</p>
                         <input id="username">
 
-                        <p>Password:</p>
-                        <input type="password" id="password" maxlength="8">
+                        <p>Audio:</p>
+                        <input type = "file" name="file" accept = ".mp3"/>
         
-                        <p>Name:</p>
-                        <input id="name" type = "text" autofocus>
-        
-                        <p>Surname:</p>
-                        <input id="surname">
-        
-                        <p>Email:</p>
-                        <input id="email">
-        
-                        <p>Profile picture:</p>
-                        <input id="pict">
+                        <p>Picture:</p>
+                        <input type="file" id="image_input" accept="image/jpeg, image/png, image/jpg">
+                        <br><br>
+                        <div id="display_image"></div>
 
-                        <button type="button" onclick="validateForm()">Change values</button> 
                     </div>
                     <br>
                     <div id = "demo"></div>  
@@ -97,10 +76,12 @@
             </div>
         </div>
 
+
     <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="script/account.js"></script>
     <script src="script/main-page.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="script/audioplayer.js"></script>
+    <script src="script/podcast-upload.js"></script>
     </body>
 </html>

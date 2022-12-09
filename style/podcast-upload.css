@@ -1,0 +1,8 @@
+#display_image{
+    width: 500px;
+    height: 325px;
+    border: 2px solid black;
+    display:block;
+    margin:auto;
+    background-size: cover;
+  }
