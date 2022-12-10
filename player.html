@@ -11,44 +11,23 @@
     </head> 
 
     <body onload="loadProfilePic()">
-        <div class="flex-container">
+        <div class="flex-container back">
             <!--Header part-->
             <div class="col-12 row-1 header">
                 <div class="col-1 logo" >
                     <img class="logo_img" src="img/logo.png">
                 </div>
                 <div class="col-1 title"><p>Spop.ify</p></div>
-                <div class="col-1 empty_cont">&nbsp;</div>
-                <div class="col-6" style="padding: 50px;">
-                    <div class="button col-3" onclick='goTo("main-page-after-login.html")'>
-                        <img src="img/menu/home.png" width="15" height="15">
-                        Home                   
-                    </div>
-                        <!--Cambiar el goto-->
-                    <div class="button col-3" onclick='goTo("search.html")'>
-                        <img src="img/menu/lupa.png" width="15" height="15">
-                        Search
-                    </div>
-                    <div class="button col-3" onclick='goTo("library.html")'>
-                        <img src="img/menu/playlist.png" width="15" height="15">
-                        Library
-                    </div>
-                </div>
-                <div class="col-2 empty_cont">&nbsp;</div>
-                <div class="col-1 profile">
-                    <img onclick="myFunction()" class="profile_pic" id="profile" src="img/profile_pic/default_profile.jpg">
-                    <div id="myDropdown" class="dropdown-content">
-                        <a href="account.html">Account</a>
-                        <a href="profile.html">Profile</a>
-                        <a href="settings.html">Settings</a>
-                        <a id="logout">Logout</a>
-                    </div>
+                <div class="col-9 empty_cont">&nbsp;</div>
+
+                <div class="col-1 button" onclick='GoTo("main-page-after-login")'>
+                    <p>Back</p>
                 </div> 
             </div>
 
             <div class = "col-12 row-10 flex-container">  
                 <!--Main part-->
-                <div class="col-6 main">
+                <div class="col-6 ">
                     <div>
                         <img id="song-cover" class="cover" src="img/Louis_faith.jpg">
                     </div>

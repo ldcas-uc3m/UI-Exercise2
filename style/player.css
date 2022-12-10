@@ -11,3 +11,26 @@
 .song-name {
     padding-top: 0;
 }
+
+
+.button{
+    padding: 8px;
+    margin-left: 6.5%;
+    background-color: #5EAAA8;
+    border-radius: 200px;
+}
+
+.button:hover {
+    background-color: #377775;
+}
+
+.button_sel{
+    padding: 8px;
+    margin-left: 6.5%;
+    background-color: #377775;
+    border-radius: 200px;
+}
+
+.back {
+    background-color: #056676;
+}
