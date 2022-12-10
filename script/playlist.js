@@ -98,11 +98,11 @@ function LoadPlaylist(){
     /* Create the layout for each song */
     for (let i = 2; i < playlist.length; i++) {
         let audio = songs[playlist[i]+"_a"];
-        let code = "<div class='grid-song'><img class='cover' src='" 
+        let code = "<div class='grid-song'><img class='cover-s' src='" 
         + songs[playlist[i]+"_i"] 
         + "' onclick=\"changeSong('" + audio 
-        + "')\"></div><div class='grid2'><div class = 'song-name'>" + songs[playlist[i]+"_t"] 
-        + "</div><div class = 'song-artist'>" + songs[playlist[i]+"_s"] 
+        + "')\"></div><div class='info-s-grid'><div class = 'song-name-pl'>" + songs[playlist[i]+"_t"] 
+        + "</div><div class = 'song-artist-pl'>" + songs[playlist[i]+"_s"] 
         + "</div></div><div class='menu-song' onclick=\"songFunction('" 
         + (i-2) + "')\" id='menu-song'>...<div class='dropdown-content-s' id='dcs-" 
         + (i-2) +"'>" 
@@ -120,7 +120,7 @@ function LoadPlaylist(){
         if (!checkSame(playlist, liked_songs)){
           code += "<a href='#' onclick=\"delFromPlaylist('" + i + "')\">Remove From Playlist</a>"
         }
-        code += "<a href='#'>Share</a></div></div><div class='line'></div>";
+        code += "<a href='#'>Share</a></div></div><div class='line-pl'></div>";
         target.innerHTML += code;
     }
 }

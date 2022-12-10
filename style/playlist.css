@@ -50,43 +50,43 @@
     margin-right: 4%;
 }
 
-.grid-container {
+.grid-container-s {
     display: grid;
     grid-template-columns: 50px auto 20px;
     padding-bottom: 5%;
     margin: 10px;
 }
 
-.grid-container > div {
+.grid-container-s > div {
     text-align: left;
 }
 
 /*Cover image*/
-.cover{
+.cover-s{
     width:50px; 
     height:50px;
 }
 
-.cover:hover{
+.cover-s:hover{
     transform: scale(1.1);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 
 /*Name and Author of the song*/
-.grid2{ 
+.info-s-grid{ 
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: 30px auto;
 }
 
-.song-name {
+.song-name-pl {
     font-weight: bold;
     margin-left: 10px;
     font-size: 20px;
 }
 
-.song-artist {
+.song-artist-pl {
     margin-left: 10px;
     font-size: 13px;
 }
@@ -124,7 +124,7 @@
 
 
 /*Line layout*/
-.line {
+.line-pl {
     grid-column: 1 / span 3;
     height: 2px;
     background-color: black;
