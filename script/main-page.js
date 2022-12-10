@@ -158,17 +158,17 @@ function loadPodcasts(){
   let cookie_text = getCookie(username);
   var user_cookie = JSON.parse(cookie_text);
   
-  // podcasts = user_cookie[7];
+  podcasts = user_cookie[7];
 
   var target = document.getElementById("myTable");
   target.innerHTML += "<div class='row'><div class='tag'>Podcasts</div><div>";
 
   // Add three playlists (if you have them)
-  // for (let i = 0; i < playlists.length; i++) {
-  //   if (i < 3){
-  //    target.innerHTML += "<div class='grid-song'><div class='grid2'><div><img class='cover' src=" + playlists[i][1] + " width='150' height='150' onclick=\"goToPlaylist('" + i.toString() + "')\"></div><div class='song-name'><div><b>" + playlists[i][0] + "</b> <br></div></div></div></div>";
-  //  }  
-  //}
+  for (let i = 0; i < podcasts.length; i++) {
+     if (i < 3){
+      target.innerHTML += "<div class='grid-song'><div class='grid2'><div><img class='cover' src=" + podcasts[i][1] + " width='150' height='150' onclick=\"goToPodcast('" + i.toString() + "')\"></div><div class='song-name'><div><b>" + podcasts[i][0] + "</b> <br></div></div></div></div>";
+    }  
+  }
 
   // Add three podcast recommendations
   target.innerHTML += "<div class='grid-song'><div class='grid2'><div><img class='cover' src=https://profesional.tarkett.es/media/img/M/THH_24567081_24594081_24596081_24601081_24563081_24565081_24588081_001.jpg width='150' height='150'></div><div class='song-name'><div><b>Podcast recommendation 1</b> <br></div></div></div></div>";
@@ -203,6 +203,15 @@ function goToPlaylist(index){
   var user_cookie = JSON.parse(cookie_text);
   setCookie("playlist", JSON.stringify(user_cookie[6][index]));
   goTo("playlist.html")
+}
+
+function goToPodcast(index){
+  deleteCookie("podcast");
+  let username = getCookie("username");
+  let cookie_text = getCookie(username);
+  var user_cookie = JSON.parse(cookie_text);
+  setCookie("podcast", JSON.stringify(user_cookie[7][index]));
+  goTo("podcast.html")
 }
 
 // Function to go to Likes songs playlist
