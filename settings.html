@@ -49,7 +49,9 @@
             <!--Main part-->
             <div class = "col-12 row-10 flex-container">  
                 <div class="col-3 main">
-                    <h1>Settings</h1>
+                    <div class="title" id="account">SETTINGS</div>
+                    <div class="line"></div>
+
                     <ul>
                         <li>Theme</li>
                         <select name="mode" id="mode" oninput="setTheme(this.value)">
@@ -68,7 +70,7 @@
                         <p>10s</p>
                         <li>Font</li>
                         <p>8px</p>
-                        <input type="range" min="8" max="28" value="16" class="slider" oninput="updateFont(this.value)">
+                        <input type="range" min="8" max="28" value="16" class="slider" oninput="setFont(this.value)" id="font-size-slider">
                         <p>22px</p>
                     </ul> 
                     <br><br><br><br><br><br>         

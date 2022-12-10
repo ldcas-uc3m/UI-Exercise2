@@ -6,6 +6,10 @@
     width: 30%;
 }
 
+.logo:hover{
+    cursor:pointer;
+}
+
 .submit{
     color: white;
     position: relative;

@@ -106,6 +106,10 @@ $(function() {
 function changeSong(audioFile){
   document.getElementById("audio").setAttribute('src', audioFile);
   audio.play(); //call this to play the song right away
+  // save the song
+  song = audioFile.split("/");
+  song_name = song[song.length - 1].split(".")[0];
+  localStorage.setItem('curr-song', song_name);
 }
 
 // Function to load the profile picture selected by the user
@@ -404,12 +408,28 @@ $(document).ready(function(){
 });  
 
 
+/* Font */
+
+function setFont(target) {
+  /* 
+  Changes the fontsize to the target font
+  */
+  fontSize = target + "px";
+  $("body").css({'font-size':fontSize});
+  localStorage.setItem('font-size', target);
+}
+
+function loadFont() {
+  const currentFont = localStorage.getItem('font-size') ? localStorage.getItem('font-size') : null;
+  setFont(currentFont);
+}
+
 /* Theme */
 
 function setTheme(value) {
   if (value === "default") {
       document.body.classList.remove("dark-mode");
-      $(".main").css({'background-color': '#F0E9D2'});
+      $(".main").css({'background-color': '#E6DDC4'});  // F0E9D2
       localStorage.setItem('theme', 'default');
   } else if (value === "dark") {
       document.body.classList.add("dark-mode");
@@ -423,4 +443,7 @@ function loadTheme() {
   setTheme(currentTheme);
 }
 
+
+/* MAIN */
+loadFont();
 loadTheme();
