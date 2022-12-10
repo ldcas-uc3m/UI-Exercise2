@@ -1,0 +1,13 @@
+.cover {
+    width: 60%;
+    height: 60%;
+}
+
+.cover:hover {
+    transform: none;
+    box-shadow: none;
+}
+
+.song-name {
+    padding-top: 0;
+}

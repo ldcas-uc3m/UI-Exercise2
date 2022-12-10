@@ -106,6 +106,10 @@ $(function() {
 function changeSong(audioFile){
   document.getElementById("audio").setAttribute('src', audioFile);
   audio.play(); //call this to play the song right away
+  // save the song
+  song = audioFile.split("/");
+  song_name = song[song.length - 1].split(".")[0];
+  localStorage.setItem('curr-song', song_name);
 }
 
 // Function to load the profile picture selected by the user
