@@ -24,7 +24,7 @@ var songs = {
     "sti_s": "Shawn Mendes",
     "sti_i": "img/sm/handwritten.jpg",
     "sti_a": "audio/sm/stitches.mp3",
-    "tnhmb_t": "There's Nothing Holdin' <br> Me Back",
+    "tnhmb_t": "There's Nothing Holdin' Me Back",
     "tnhmb_s": "Shawn Mendes",
     "tnhmb_i": "img/sm/illuminate.jpg",
     "tnhmb_a": "audio/sm/theres-nothing-holding-me-back.mp3",
@@ -65,25 +65,147 @@ var songs = {
 // Function to add the songs to the playlist part
 function LoadPlaylist(){
     loadProfilePic()
+    /* Get User cookie to get Liked songs playlist*/
     let username = getCookie("username");
+    let cookie_text = getCookie(username);
+    var user_cookie = JSON.parse(cookie_text);
+    var liked_songs=user_cookie[6][0];
+
+    /* Get playlist info from playlist cookie */
     let playlist_text = getCookie("playlist");
     var playlist = JSON.parse(playlist_text);
+
+    /* Set playlist picture */
     var image = document.getElementById('pict'); 
     image.src=playlist[1];
     image.style.height = "200px";
     image.style.weight = "200px";
+
+    /* Set playlist name */
     var name = document.getElementById('name'); 
     name.innerHTML=playlist[0];
+
+    /* Set playlist creator */
     var user = document.getElementById('username'); 
     user.innerHTML = username;
 
+    /* Set Layout of grid for the number of songs in the  playlist*/
+    document.getElementById("playlist").style.gridTemplateRows = "repeat(" + (playlist.length-2) + ", 50px 27px)";
+
+    var target = document.getElementById("playlist");
+    target.innerHTML = "";
+    /* Create the layout for each song */
     for (let i = 2; i < playlist.length; i++) {
-        var target = document.getElementById("playlist");
         let audio = songs[playlist[i]+"_a"];
-        target.innerHTML += "<div class='grid-song'><img class='cover' src='" 
+        let code = "<div class='grid-song'><img class='cover' src='" 
         + songs[playlist[i]+"_i"] 
-        + "' onclick=\"changeSong('" + audio + "')\"></div><div class='grid2'><div class = 'song-name'>" + songs[playlist[i]+"_t"] 
+        + "' onclick=\"changeSong('" + audio 
+        + "')\"></div><div class='grid2'><div class = 'song-name'>" + songs[playlist[i]+"_t"] 
         + "</div><div class = 'song-artist'>" + songs[playlist[i]+"_s"] 
-        + "</div></div><div class='menu-song'>...</div><div class='line'></div>";
+        + "</div></div><div class='menu-song' onclick=\"songFunction('" 
+        + (i-2) + "')\" id='menu-song'>...<div class='dropdown-content-s' id='dcs-" 
+        + (i-2) +"'>" 
+        if (!(liked_songs.includes(playlist[i]))){
+          code += "<a href='#' onclick=\"addToLiked('" + playlist[i] + "')\">Add To Liked Songs</a>";
+        }
+        else{
+          code += "<a href='#' onclick=\"delFromLiked('" + playlist[i] + "')\">Remove From Liked Songs</a>";
+        }
+        code += "<a href='#'>Add To Queue</a><a href='#'>Add To Playlist</a><a href='#'>Delete From Playlist</a><a href='#'>Share</a></div></div><div class='line'></div>";
+        target.innerHTML += code;
     }
 }
+
+
+//Add to Liked songs
+function addToLiked(song) {
+  /* Get playlist info from playlist cookie */
+  let playlist_text = getCookie("playlist");
+  var playlist = JSON.parse(playlist_text);
+
+  /* Get User cookie to get Liked songs playlist*/
+  let username = getCookie("username");
+  let cookie_text = getCookie(username);
+  var user_cookie = JSON.parse(cookie_text);
+  var liked_songs=user_cookie[6][0];
+
+  if (checkSame(playlist, liked_songs)) {
+    playlist.push(song);
+      deleteCookie("playlist");
+      setCookie("playlist", JSON.stringify(playlist), 30);
+  }
+  addLiked(song)
+  LoadPlaylist()
+}
+
+//Delete From Liked songs
+function delFromLiked(song) {
+  /* Get playlist info from playlist cookie */
+  let playlist_text = getCookie("playlist");
+  var playlist = JSON.parse(playlist_text);
+
+  /* Get User cookie to get Liked songs playlist*/
+  let username = getCookie("username");
+  let cookie_text = getCookie(username);
+  var user_cookie = JSON.parse(cookie_text);
+  var liked_songs=user_cookie[6][0];
+
+  if (checkSame(playlist, liked_songs)) {
+    const song_i = playlist.indexOf(song);
+    if (song_i > -1) { // only splice array when item is found
+      playlist.splice(song_i, 1); // 2nd parameter means remove one item only
+      deleteCookie("playlist");
+      setCookie("playlist", JSON.stringify(playlist), 30);
+    }
+  }
+  delLiked(song)
+  LoadPlaylist()
+}
+
+// Check if two arrays are the same 
+function checkSame(arr1, arr2) {
+  let len = arr1.length;
+  if (len> arr2.length){
+    len = arr2.length;
+  }
+  for (let i = 0; i < len; i++) {
+    if (arr1[i] != arr2[i]){
+      return false
+    }
+  }
+  return true
+}
+
+//Menu for playlist
+function songFunction(num) {
+  var dropdowns = document.getElementsByClassName("dropdown-content-s");
+  var i;
+  for (i = 0; i < dropdowns.length; i++) {
+    var openDropdown = dropdowns[i];
+    openDropdown.style.display="none";
+  }
+  document.getElementById("dcs-"+num).style.display="block";
+}
+
+// Close all the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.profile_pic')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove('show');
+      }
+    }
+  }
+  if (!event.target.matches('.menu-song')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content-s");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      openDropdown.style.display="none";
+    }
+  }
+}
+
