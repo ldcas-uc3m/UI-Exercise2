@@ -3,7 +3,8 @@ const songs = {
     "this-love": [
         "img/ts/1989-tv.jpg",
         "All too well",
-        "Taylor Swift"
+        "Taylor Swift",
+        "audio/ts/this-love.mp3"
     ],
     "mr-perfectly-fine": [
         "img/ts/fearless-tv.jpg",
@@ -88,7 +89,9 @@ function setSong() {
     $("#song-cover").attr("src", song[0]);
     $("#song-name").text(song[1]);
     $("#song-artist").text(song[2]);
+    $("#url").text(song[3]);
 }
+
 
 // set background colors
 document.body.classList.add("dark-mode");
