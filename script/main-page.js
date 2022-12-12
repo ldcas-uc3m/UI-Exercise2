@@ -170,7 +170,7 @@ function loadPodcasts(){
   // Add three playlists (if you have them)
   for (let i = 0; i < podcasts.length; i++) {
      if (i < 3){
-      target.innerHTML += "<div class='grid-song'><div class='grid2'><div><img class='cover' src=" + podcasts[i][1] + " width='150' height='150' onclick=\"goToPodcast('" + i.toString() + "')\"></div><div class='song-name'><div><b>" + podcasts[i][0] + "</b> <br></div></div></div></div>";
+      target.innerHTML += "<div class='grid-song'><div class='grid2'><div><img class='cover' src=" + podcasts[i][1] + " width='150' height='150'></div><div class='song-name'><div><b>" + podcasts[i][0] + "</b> <br></div></div></div></div>";
     }  
   }
 

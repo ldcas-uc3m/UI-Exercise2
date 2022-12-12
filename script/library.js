@@ -34,7 +34,7 @@ function genPodcast(){
     var target = document.getElementById("myTable");
     target.innerHTML = "<div class='grid-song'><div class='grid2'><div><img class='cover' src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRal66RNJGRaNvsBcwWGY8S9rZO5UPXXpAEwg&usqp=CAU' width='150' height='150' onclick=\"goTo('upload-podcast.html')\"></div><div class='song-name'><div><b>Create a podcast</b> <br></div></div></div></div>";
     for (let i = 0; i < playlists.length; i++) {
-        target.innerHTML += "<div class='grid-song'><div class='grid2'><div><img class='cover' src=" + podcasts[i][1] + " width='150' height='150' onclick=\"goToPodcast('" + i.toString() + "')\"></div><div class='song-name'><div><b>" + podcasts[i][0] + "</b> <br></div></div></div></div>";
+        target.innerHTML += "<div class='grid-song'><div class='grid2'><div><img class='cover' src=" + podcasts[i][1] + " width='150' height='150'></div><div class='song-name'><div><b>" + podcasts[i][0] + "</b> <br></div></div></div></div>";
     }  
 }
 
