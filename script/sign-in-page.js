@@ -87,7 +87,8 @@ function validateForm() {
         let dob = document.getElementById("dob").value;
         let pict = document.getElementById("pict").value;
         let password = document.getElementById("password").value;
-        var list = [password, name, surname, email, dob, pict, [["Liked Songs", "https://i1.sndcdn.com/artworks-y6qitUuZoS6y8LQo-5s2pPA-t500x500.jpg"]]];
+
+        var list = [password, name, surname, email, dob, pict, [["Liked Songs", "https://i1.sndcdn.com/artworks-y6qitUuZoS6y8LQo-5s2pPA-t500x500.jpg"]], []];
         
         let cookie_text = getCookie(username);
 
