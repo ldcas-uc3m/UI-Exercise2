@@ -16,6 +16,9 @@
 .button{
     padding: 8px;
     margin-left: 6.5%;
+    margin-top: 6.5%;
+    margin-bottom: 6.5%;
+    margin-right: 6.5%;
     background-color: #5EAAA8;
     border-radius: 200px;
 }

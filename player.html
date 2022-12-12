@@ -20,14 +20,18 @@
                 <div class="col-1 title"><p>Spop.ify</p></div>
                 <div class="col-9 empty_cont">&nbsp;</div>
 
-                <div class="col-1 button" onclick='GoTo("main-page-after-login")'>
-                    <p>Back</p>
+                <div class="col-1" onClick="history.go(-1);">
+                    <div class="button">
+                        <p> < Back</p>
+                    </div>
+                    
                 </div> 
             </div>
 
             <div class = "col-12 row-10 flex-container">  
                 <!--Main part-->
                 <div class="col-6 ">
+                    <div> <h3>You are currently listening to:</h3></div>
                     <div>
                         <img id="song-cover" class="cover" src="img/Louis_faith.jpg">
                     </div>
@@ -37,9 +41,11 @@
                         <p id="song-artist"></p>
                     </div>
                 </div>
-                
+
+
+
                 <div class="col-12 row-1 footer">
-                    <audio preload="auto" id= "audio" controls>
+                    <audio preload="auto" controls>
                         <source src="audio/ts/this-love.mp3">
                     </audio>
                 </div>
