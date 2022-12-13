@@ -71,7 +71,7 @@ function genArts(){
     document.getElementById("art_butt").style.color = "#377775";
 
     var target = document.getElementById("myTable");
-    target.innerHTML = "<div class='grid-song'><div class='grid2'><div><img class='cover' src='img/artist/ts.jpg' width='150' height='150'></div><div class='song-name'><div><b>Taylor Swift</b> <br></div></div></div></div>";
+    target.innerHTML = "<div class='grid-song'><div class='grid2'><div><img class='cover' onclick=\"goTo('artist.html')\" src='img/artist/ts.jpg' width='150' height='150'></div><div class='song-name'><div><b>Taylor Swift</b> <br></div></div></div></div>";
     target.innerHTML += "<div class='grid-song'><div class='grid2'><div><img class='cover' src=img/artist/hs.jpg width='150' height='150'></div><div class='song-name'><div><b>Harry Styles</b> <br></div></div></div></div>";
     target.innerHTML += "<div class='grid-song'><div class='grid2'><div><img class='cover' src=img/artist/lauv.jpg width='150' height='150'></div><div class='song-name'><div><b>Lauv</b> <br></div></div></div></div>";
     target.innerHTML += "<div class='grid-song'><div class='grid2'><div><img class='cover' src=img/artist/dc.jpg width='150' height='150'></div><div class='song-name'><div><b>Dove Cameron</b> <br></div></div></div></div>";
