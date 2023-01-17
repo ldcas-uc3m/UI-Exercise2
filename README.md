@@ -6,5 +6,6 @@ Universidad Carlos III de Madrid
 
 Design, development, and documentation of a 2.0 website.
 
-# Introduction
-The case study described in this document is aimed at designing and developing a web user interface. To this end, you are expected to put in practice the lessons learned during the course, including both theory and lab sessions. This means that amongst other aspects, usability and accessibility concepts, web design patterns and technologies for developing web user interfaces will form part of the case study, which is described in Section 2.
+## Execution
+To run it, install and execute [XAMPP](https://www.apachefriends.org/download.html)'s Apache server.  
+Place this folder in the `htcdocs` directory (`C:\xampp\htdocs` for Windows, `/opt/lampp/htdocs/` for Linux) and go to `localhost/<folder_name>/main-page-before-login.html` on the explorer.
